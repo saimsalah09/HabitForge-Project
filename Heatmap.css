@@ -1,0 +1,45 @@
+.heatmap {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+}
+
+.month-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day {
+  width: 22px;          /* 🔥 small box */
+  height: 22px;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* GitHub-style colors */
+.level-0 { background: #e5e7eb; color: #374151; }
+.level-1 { background: #bbf7d0; color: #065f46; }
+.level-2 { background: #4ade80; color: #064e3b; }
+.level-3 { background: #166534; color: white; }
+
+.day:hover {
+  outline: 2px solid #2563eb;
+}

@@ -1,0 +1,190 @@
+/* =======================
+   GLOBAL
+======================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #d9e2ec);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 12px;
+}
+
+/* =======================
+   CARD LAYOUT
+======================= */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+/* =======================
+   HEADER
+======================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* =======================
+   BADGES
+======================= */
+.badge {
+  display: inline-block;
+  background: #22c55e;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+/* =======================
+   HABITS
+======================= */
+.habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.habit:last-child {
+  border-bottom: none;
+}
+
+.habit-info {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* ⭐ spacing fix */
+}
+
+.habit-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.habit-category {
+  background: #e5e7eb;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.streak {
+  color: #ef4444;
+  font-size: 13px;
+}
+
+.habit-actions {
+  display: flex;
+  gap: 10px; /* ⭐ button spacing fix */
+}
+
+/* =======================
+   ADD HABIT BAR
+======================= */
+.add-habit {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+input, select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #125aa3;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* =======================
+   DARK MODE
+======================= */
+.app.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.app.dark .card {
+  background: #1e293b;
+}
+
+.app.dark input,
+.app.dark select {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+.app.dark .habit-category {
+  background: #334155;
+  color: #e5e7eb;
+}
+
+.app.dark button {
+  background: #4f46e5;
+}
+
+.dark-toggle {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .habit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .habit-actions {
+    width: 100%;
+  }
+
+  .add-habit {
+    flex-direction: column;
+  }
+}
